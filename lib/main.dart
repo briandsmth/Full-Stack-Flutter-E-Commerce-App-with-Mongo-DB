@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/constants/global_variables.dart';
+import 'package:e_commerce_app/features/admin/screens/admin_screen.dart';
 import 'package:e_commerce_app/features/auth/auth_screen.dart';
 import 'package:e_commerce_app/features/services/auth_.dart';
 import 'package:e_commerce_app/features/commonWidgets/bottom_bar.dart';
@@ -43,7 +44,9 @@ class _MyAppState extends State<MyApp> {
               elevation: 0, iconTheme: IconThemeData(color: Colors.black))),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? const BottomBar()
+          ? Provider.of<UserProvider>(context).user.type == 'user'
+              ? const BottomBar()
+              : AdminScreen()
           : const AuthScreen(),
     );
   }

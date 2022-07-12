@@ -1,5 +1,8 @@
 import 'package:e_commerce_app/constants/global_variables.dart';
 import 'package:e_commerce_app/features/home/widgets/address_box.dart';
+import 'package:e_commerce_app/features/home/widgets/deal_of_day.dart';
+import 'package:e_commerce_app/features/home/widgets/slider_images.dart';
+import 'package:e_commerce_app/features/home/widgets/top_categories.dart';
 import 'package:e_commerce_app/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -93,11 +96,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           )),
-      body: Column(
-        children: [
-          AddressBox(),
-          SizedBox(height: 10,),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            AddressBox(),
+            SizedBox(height: 10),
+            TopCategories(),
+            SizedBox(height: 10),
+            SliderImages(),
+            DealOfDay(),
+          ],
+        ),
       ),
     );
   }

@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const authRouter = require("./routes/auth");
+const adminRouter = require("./routes/admin")
 
 //INIT
 const PORT = 3000;
@@ -16,6 +17,7 @@ app.listen(PORT, ()=> {
 //middleware
 app.use(express.json());
 app.use(authRouter);
+app.use(adminRouter);
 
 //connection
 mongoose.connect(DB).then(()=>{

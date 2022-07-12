@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String uri = 'http://192.168.178.82:3000';
+String uri = 'http://192.168.205.173:3000';
 
 class GlobalVariables {
   // COLORS
@@ -33,23 +33,23 @@ class GlobalVariables {
   static const List<Map<String, String>> categoryImages = [
     {
       'title': 'Mobiles',
-      'image': 'assets/images/mobiles.jpeg',
+      'image': 'assets/images/electronics.png',
     },
     {
       'title': 'Essentials',
-      'image': 'assets/images/essentials.jpeg',
+      'image': 'assets/images/essential.png',
     },
     {
       'title': 'Appliances',
-      'image': 'assets/images/appliances.jpeg',
+      'image': 'assets/images/appliance.png',
     },
     {
       'title': 'Books',
-      'image': 'assets/images/books.jpeg',
+      'image': 'assets/images/book.png',
     },
     {
       'title': 'Fashion',
-      'image': 'assets/images/fashion.jpeg',
+      'image': 'assets/images/fashion.png',
     },
   ];
 }

@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/features/account/services/account_services.dart';
 import 'package:e_commerce_app/features/account/widgets/account_button.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class _TopButtonState extends State<TopButton> {
         const SizedBox(height: 10,),
         Row(
           children: [
-            AccountButton(txt: 'Log Out', onTap: (){}),
+            AccountButton(txt: 'Log Out', onTap: () => AccountServices().logOut(context)),
             AccountButton(txt: 'Your Wish List', onTap: (){}),
           ],
         ),

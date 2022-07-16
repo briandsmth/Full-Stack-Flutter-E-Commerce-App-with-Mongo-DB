@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 
 class AddProductScreen extends StatefulWidget {
   static const String routeName = '/add-product';
-  AddProductScreen({Key? key}) : super(key: key);
+  const AddProductScreen({Key? key}) : super(key: key);
 
   @override
   State<AddProductScreen> createState() => _AddProductScreenState();
@@ -23,7 +23,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
   TextEditingController priceController = TextEditingController();
   TextEditingController quatityController = TextEditingController();
   final AdminServices adminServices = AdminServices();
-  String category = 'Mobile';
+  String category = 'Mobiles';
   List<File> image = [];
   final _addProductFormKey = GlobalKey<FormState>();
 
@@ -37,7 +37,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
   }
 
   List<String> productCategories = [
-    'Mobile',
+    'Mobiles',
     'Essentials',
     'Appliances',
     'Books',
@@ -74,7 +74,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
               decoration:
                   const BoxDecoration(gradient: GlobalVariables.appBarGradient),
             ),
-            title: Text(
+            title: const Text(
               'Add Product',
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -84,10 +84,10 @@ class _AddProductScreenState extends State<AddProductScreen> {
         child: Form(
             key: _addProductFormKey,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   image.isNotEmpty
@@ -109,8 +109,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
                           onTap: selectImage,
                           child: DottedBorder(
                             borderType: BorderType.RRect,
-                            radius: Radius.circular(10),
-                            dashPattern: [10, 4],
+                            radius: const Radius.circular(10),
+                            dashPattern: const [10, 4],
                             strokeCap: StrokeCap.round,
                             child: Container(
                               width: double.infinity,
@@ -120,7 +120,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
+                                children: const [
                                   Icon(
                                     Icons.folder_open,
                                     size: 40,
@@ -137,13 +137,13 @@ class _AddProductScreenState extends State<AddProductScreen> {
                             ),
                           ),
                         ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   CustomTextfield(
                       controller: productNameController,
                       hinttext: 'Product Name'),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   CustomTextfield(
@@ -151,25 +151,25 @@ class _AddProductScreenState extends State<AddProductScreen> {
                     hinttext: 'Product Description',
                     maxLines: 7,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   CustomTextfield(
                       controller: priceController, hinttext: 'Product Price'),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   CustomTextfield(
                       controller: quatityController,
                       hinttext: 'Product Quantity'),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   SizedBox(
                     width: double.infinity,
                     child: DropdownButton(
                       value: category,
-                      icon: Icon(Icons.keyboard_arrow_down),
+                      icon: const Icon(Icons.keyboard_arrow_down),
                       items: productCategories.map((String item) {
                         return DropdownMenuItem(
                           value: item,
@@ -183,11 +183,11 @@ class _AddProductScreenState extends State<AddProductScreen> {
                       },
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   CustomButton(txt: 'Sell', onTap: sellProduct),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                 ],

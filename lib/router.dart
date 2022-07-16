@@ -1,7 +1,11 @@
 import 'package:e_commerce_app/features/admin/screens/add_product.dart';
 import 'package:e_commerce_app/features/auth/auth_screen.dart';
+import 'package:e_commerce_app/features/home/screens/category_screen.dart';
 import 'package:e_commerce_app/features/home/screens/home_screen.dart';
 import 'package:e_commerce_app/features/commonWidgets/bottom_bar.dart';
+import 'package:e_commerce_app/features/product_detail/screens/product_detail_screen.dart';
+import 'package:e_commerce_app/features/search/screens/search_screen.dart';
+import 'package:e_commerce_app/models/product_.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
@@ -17,7 +21,28 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
           settings: routeSettings, builder: (_) => const BottomBar());
     case AddProductScreen.routeName:
       return MaterialPageRoute(
-          settings: routeSettings, builder: (_) =>  AddProductScreen());
+          settings: routeSettings, builder: (_) => const AddProductScreen());
+    case CategoryScreen.routeName:
+      var category = routeSettings.arguments as String;
+      return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => CategoryScreen(
+                category: category,
+              ));
+    case SearchCreen.routeName:
+      var searchQuery = routeSettings.arguments as String;
+      return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => SearchCreen(
+                searchQuery: searchQuery,
+              ));
+    case ProductDetailScreen.routeName:
+      var product = routeSettings.arguments as Product;
+      return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => ProductDetailScreen(
+                product: product,
+              ));
     default:
       return MaterialPageRoute(
           settings: routeSettings,

@@ -4,7 +4,7 @@ import 'package:e_commerce_app/features/admin/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
 
 class AdminScreen extends StatefulWidget {
-  AdminScreen({Key? key}) : super(key: key);
+  const AdminScreen({Key? key}) : super(key: key);
 
   @override
   State<AdminScreen> createState() => _AdminScreenState();
@@ -16,7 +16,7 @@ class _AdminScreenState extends State<AdminScreen> {
   double iconBorderWidth = 5;
 
   List<Widget> pages = [
-    PostScreen(),
+    const PostScreen(),
     const Center(
       child: Text('Analytics Page'),
     ),
@@ -55,7 +55,7 @@ class _AdminScreenState extends State<AdminScreen> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(left: 15, right: 15),
-                  child: Text(
+                  child: const Text(
                     "Admin",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.black),

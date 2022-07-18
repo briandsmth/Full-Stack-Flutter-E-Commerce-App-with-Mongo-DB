@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/constants/global_variables.dart';
+import 'package:e_commerce_app/features/address/screens/address_screen.dart';
 import 'package:e_commerce_app/features/cart/widgets/cart_product.dart';
 import 'package:e_commerce_app/features/cart/widgets/cart_subtotal.dart';
 import 'package:e_commerce_app/features/commonWidgets/button.dart';
@@ -20,11 +21,20 @@ class _CartScreenState extends State<CartScreen> {
     Navigator.pushNamed(context, SearchCreen.routeName, arguments: query);
   }
 
+  void navigateToAddressScreen(int sum) {
+    Navigator.pushNamed(context, AddressScreen.routeName,
+        arguments: sum.toString());
+  }
+
   @override
   Widget build(BuildContext context) {
     final user = context.watch<UserProvider>().user;
 
-    var navigateToSearchScreen;
+    int sum = 0;
+    user.cart
+        .map((e) => sum = e['quantity'] * e['product']['price'] as int)
+        .toList();
+
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(60),
@@ -111,7 +121,7 @@ class _CartScreenState extends State<CartScreen> {
               padding: const EdgeInsets.all(8.0),
               child: CustomButton(
                 txt: 'Proceed to Buy (${user.cart.length} items)',
-                onTap: () {},
+                onTap: () => navigateToAddressScreen(sum),
               ),
             ),
             SizedBox(

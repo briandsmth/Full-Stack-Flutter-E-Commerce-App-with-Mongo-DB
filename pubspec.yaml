@@ -37,6 +37,7 @@ dependencies:
     sdk: flutter
   flutter_rating_bar: ^4.0.1
   http: ^0.13.4
+  pay: ^1.0.10
   provider: ^6.0.3
   shared_preferences: ^2.0.15
 
@@ -56,12 +57,15 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/logo.png
-    - assets/images/book.png
-    - assets/images/appliance.png
-    - assets/images/electronics.png
-    - assets/images/fashion.png
-    - assets/images/essential.png
+  - assets/images/
+  - assets/applepay.json
+  - assets/gpay.json
+    # - assets/images/logo.png
+    # - assets/images/book.png
+    # - assets/images/appliance.png
+    # - assets/images/electronics.png
+    # - assets/images/fashion.png
+    # - assets/images/essential.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

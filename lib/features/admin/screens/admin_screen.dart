@@ -1,5 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:e_commerce_app/constants/global_variables.dart';
+import 'package:e_commerce_app/features/admin/screens/analytic_screen.dart';
+import 'package:e_commerce_app/features/admin/screens/order_screen.dart';
 import 'package:e_commerce_app/features/admin/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,12 +19,8 @@ class _AdminScreenState extends State<AdminScreen> {
 
   List<Widget> pages = [
     const PostScreen(),
-    const Center(
-      child: Text('Analytics Page'),
-    ),
-    const Center(
-      child: Text('Cart Page'),
-    ),
+    const AnalyticScreen(),
+    const OrderScreen(),
   ];
 
   void updatePage(int page) {

@@ -21,7 +21,7 @@ class SearchedProduct extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 10),
           child: Row(
             children: [
               Image.network(
@@ -34,10 +34,10 @@ class SearchedProduct extends StatelessWidget {
                 children: [
                   Container(
                     width: 235,
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
                       product.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                       ),
                       maxLines: 2,
@@ -45,30 +45,30 @@ class SearchedProduct extends StatelessWidget {
                   ),
                   Container(
                     width: 235,
-                    padding: EdgeInsets.only(left: 10, top: 5),
+                    padding: const EdgeInsets.only(left: 10, top: 5),
                     child: Stars(rating: avgRating),
                   ),
                   Container(
                     width: 235,
-                    padding: EdgeInsets.only(left: 10, top: 5),
+                    padding: const EdgeInsets.only(left: 10, top: 5),
                     child: Text(
                       '\$${product.price}',
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       maxLines: 2,
                     ),
                   ),
                   Container(
                     width: 235,
-                    padding: EdgeInsets.only(left: 10),
-                    child: Text(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: const Text(
                       'Eligible for FREE Shipping',
                     ),
                   ),
                   Container(
                     width: 235,
-                    padding: EdgeInsets.only(left: 10, top: 5),
-                    child: Text(
+                    padding: const EdgeInsets.only(left: 10, top: 5),
+                    child: const Text(
                       'In Stock',
                       style: TextStyle(color: Colors.teal),
                       maxLines: 2,

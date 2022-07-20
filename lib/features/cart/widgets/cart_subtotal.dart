@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:e_commerce_app/providers/user_provider.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +14,10 @@ class CartSubtotal extends StatelessWidget {
         .map((e) => sum += e['quantity'] * e['product']['price'] as int)
         .toList();
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: Row(
         children: [
-          Text(
+          const Text(
             'Subtotal ',
             style: TextStyle(
               fontSize: 20,
@@ -26,7 +25,7 @@ class CartSubtotal extends StatelessWidget {
           ),
           Text(
             '\$$sum',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),

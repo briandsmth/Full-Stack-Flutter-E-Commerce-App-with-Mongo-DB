@@ -108,4 +108,13 @@ userRouter.post('/api/order', auth, async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 });
+
+userRouter.get('/api/orders/user', auth, async (req, res) =>{
+  try {
+    const orders = await Order.find({userId: req.user});
+    res.json(orders);
+  } catch (error) {
+    res.status(500).json({error: error.message})
+  }
+})
 module.exports = userRouter;

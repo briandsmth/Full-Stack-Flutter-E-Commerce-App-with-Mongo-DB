@@ -144,10 +144,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
             child: Text(
               widget.product.name,
-              style: TextStyle(fontSize: 15),
+              style: const TextStyle(fontSize: 15),
             ),
           ),
           CarouselSlider(
@@ -169,11 +169,11 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             height: 5,
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: RichText(
                 text: TextSpan(
                     text: 'Deal Price: ',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
@@ -181,7 +181,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     children: [
                   TextSpan(
                       text: '\$${widget.product.price}',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
@@ -189,14 +189,14 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 ])),
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Text(widget.product.description),
           ),
           Container(
             color: Colors.black12,
             height: 5,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -228,7 +228,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               initialRating: myRating,
               allowHalfRating: true,
               itemCount: 5,
-              itemPadding: EdgeInsets.symmetric(horizontal: 4),
+              itemPadding: const EdgeInsets.symmetric(horizontal: 4),
               itemBuilder: (context, _) => const Icon(
                     Icons.star,
                     color: Colors.orangeAccent,

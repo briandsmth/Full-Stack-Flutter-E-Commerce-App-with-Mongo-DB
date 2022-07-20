@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class SearchCreen extends StatefulWidget {
   static const String routeName = '/search-screen';
   final String searchQuery;
-  SearchCreen({Key? key, required this.searchQuery}) : super(key: key);
+  const SearchCreen({Key? key, required this.searchQuery}) : super(key: key);
 
   @override
   State<SearchCreen> createState() => _SearchCreenState();
@@ -38,7 +38,7 @@ class _SearchCreenState extends State<SearchCreen> {
   @override
   Widget build(BuildContext context) {
     return products == null
-        ? Loader()
+        ? const Loader()
         : Scaffold(
             appBar: PreferredSize(
                 preferredSize: const Size.fromHeight(60),
@@ -117,11 +117,11 @@ class _SearchCreenState extends State<SearchCreen> {
                   ),
                 )),
             body: products == null
-                ? Loader()
+                ? const Loader()
                 : Column(
                     children: [
-                      AddressBox(),
-                      SizedBox(
+                      const AddressBox(),
+                      const SizedBox(
                         height: 10,
                       ),
                       Expanded(

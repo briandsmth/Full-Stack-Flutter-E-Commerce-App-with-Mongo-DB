@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class CartScreen extends StatefulWidget {
-  CartScreen({Key? key}) : super(key: key);
+  const CartScreen({Key? key}) : super(key: key);
 
   @override
   State<CartScreen> createState() => _CartScreenState();
@@ -116,7 +116,7 @@ class _CartScreenState extends State<CartScreen> {
         child: Column(
           children: [
             const AddressBox(),
-            CartSubtotal(),
+            const CartSubtotal(),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CustomButton(
@@ -124,7 +124,7 @@ class _CartScreenState extends State<CartScreen> {
                 onTap: () => navigateToAddressScreen(sum),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Container(

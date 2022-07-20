@@ -1,7 +1,6 @@
 import 'package:e_commerce_app/constants/global_variables.dart';
 import 'package:e_commerce_app/constants/utils.dart';
 import 'package:e_commerce_app/features/address/services/address_services.dart';
-import 'package:e_commerce_app/features/commonWidgets/button.dart';
 import 'package:e_commerce_app/features/commonWidgets/textfield.dart';
 import 'package:e_commerce_app/providers/user_provider.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,7 @@ import 'package:provider/provider.dart';
 class AddressScreen extends StatefulWidget {
   static const String routeName = '/address';
   final String totalAmount;
-  AddressScreen({Key? key, required this.totalAmount}) : super(key: key);
+  const AddressScreen({Key? key, required this.totalAmount}) : super(key: key);
 
   @override
   State<AddressScreen> createState() => _AddressScreenState();
@@ -94,7 +93,7 @@ class _AddressScreenState extends State<AddressScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               if (address.isNotEmpty)
@@ -107,16 +106,16 @@ class _AddressScreenState extends State<AddressScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           address,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text(
+                    const Text(
                       'OR',
                       style: TextStyle(
                         fontSize: 18,
@@ -165,11 +164,11 @@ class _AddressScreenState extends State<AddressScreen> {
                 width: double.infinity,
                 style: GooglePayButtonStyle.black,
                 type: GooglePayButtonType.pay,
-                margin: EdgeInsets.only(top: 15),
+                margin: const EdgeInsets.only(top: 15),
                 paymentConfigurationAsset: 'gpay.json',
                 onPaymentResult: onGooglePayResult,
                 paymentItems: paymentItems,
-                loadingIndicator: Center(child: CircularProgressIndicator()),
+                loadingIndicator: const Center(child: CircularProgressIndicator()),
               ),
             ],
           ),

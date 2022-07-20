@@ -1,5 +1,4 @@
 import 'package:e_commerce_app/features/commonWidgets/loader.dart';
-import 'package:e_commerce_app/features/home/screens/home_screen.dart';
 import 'package:e_commerce_app/features/home/services/home_services.dart';
 import 'package:e_commerce_app/features/product_detail/screens/product_detail_screen.dart';
 import 'package:e_commerce_app/models/product_.dart';
@@ -38,9 +37,9 @@ class _DealOfDayState extends State<DealOfDay> {
   @override
   Widget build(BuildContext context) {
     return product == null
-        ? Loader()
+        ? const Loader()
         : product!.name.isEmpty
-            ? SizedBox()
+            ? const SizedBox()
             : GestureDetector(
                 onTap: navigateToDetailScreen,
                 child: Column(
@@ -71,7 +70,7 @@ class _DealOfDayState extends State<DealOfDay> {
                       alignment: Alignment.topLeft,
                       child: Text(
                         '\$ ${product!.price}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w800,
                         ),
@@ -87,7 +86,7 @@ class _DealOfDayState extends State<DealOfDay> {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     SingleChildScrollView(

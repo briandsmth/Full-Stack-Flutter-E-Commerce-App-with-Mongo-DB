@@ -34,7 +34,7 @@ class _CartProductState extends State<CartProduct> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 10),
           child: Row(
             children: [
               Image.network(
@@ -47,10 +47,10 @@ class _CartProductState extends State<CartProduct> {
                 children: [
                   Container(
                     width: 235,
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
                       product.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                       ),
                       maxLines: 2,
@@ -58,25 +58,25 @@ class _CartProductState extends State<CartProduct> {
                   ),
                   Container(
                     width: 235,
-                    padding: EdgeInsets.only(left: 10, top: 5),
+                    padding: const EdgeInsets.only(left: 10, top: 5),
                     child: Text(
                       '\$${product.price}',
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       maxLines: 2,
                     ),
                   ),
                   Container(
                     width: 235,
-                    padding: EdgeInsets.only(left: 10),
-                    child: Text(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: const Text(
                       'Eligible for FREE Shipping',
                     ),
                   ),
                   Container(
                     width: 235,
-                    padding: EdgeInsets.only(left: 10, top: 5),
-                    child: Text(
+                    padding: const EdgeInsets.only(left: 10, top: 5),
+                    child: const Text(
                       'In Stock',
                       style: TextStyle(color: Colors.teal),
                       maxLines: 2,
@@ -88,7 +88,7 @@ class _CartProductState extends State<CartProduct> {
           ),
         ),
         Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -108,7 +108,7 @@ class _CartProductState extends State<CartProduct> {
                         width: 35,
                         height: 32,
                         alignment: Alignment.center,
-                        child: Icon(
+                        child: const Icon(
                           Icons.remove,
                           size: 18,
                         ),
@@ -132,7 +132,7 @@ class _CartProductState extends State<CartProduct> {
                         width: 35,
                         height: 32,
                         alignment: Alignment.center,
-                        child: Icon(
+                        child: const Icon(
                           Icons.add,
                           size: 18,
                         ),
